@@ -1,0 +1,230 @@
+/* Template Skills */
+.skill {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  color: white;
+
+  cursor: auto;
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.skill::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ffffff36 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+.skill:hover{
+  transform: translateY(-5px);
+}
+.skill:hover::before {
+  opacity: 1;
+}
+
+/* Template de projeto */
+.project_card {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 24px;
+  width: 400px;
+  color: white;
+  box-shadow: 0 0 20px #00000055;
+  overflow: hidden;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project_card:hover {
+  transform: translateY(-5px);
+}
+
+.project_card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #ffffff18 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.project_card:hover::before {
+  opacity: 1;
+}
+
+.project_title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project_description {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.buttons a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+  background-color: #0056b3;
+}
+
+/* Botão */
+.gradient_border_button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 18px;
+  color: white;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.gradient_border_button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  transition: filter 0.4s ease;
+}
+
+.gradient_border_button:hover::before {
+  filter: brightness(1.2);
+}
+
+.gradient_border_button:hover {
+  color: #00ffee;
+  box-shadow:
+    0 0 10px #ff00cc,
+    0 0 20px #3333ff,
+    0 0 30px #00ffcc;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estudos */
+
+.certificado_container {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  padding: 20px 25px;
+  border-radius: 16px;
+  box-shadow: none;
+  max-width: 400px;
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado_container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, #ffffff18 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1; 
+}
+
+.certificado_container:hover::before {
+  opacity: 1;
+}
+
+.certificado_container * {
+  position: relative;
+  z-index: 1;
+}
+
+.certificado_container:hover {
+  transform: translateY(-5px);
+}
+
+.curso {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.unidade {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  opacity: 0.9;
+}
+
+.periodo {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
