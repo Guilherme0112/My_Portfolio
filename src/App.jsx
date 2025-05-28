@@ -52,6 +52,7 @@ function App() {
             <Skill image="https://impactclient.net/img/java-icon.png" name="Java" />
             <Skill image="https://cdn.worldvectorlogo.com/logos/spring-3.svg" name="Spring" />
             <Skill image="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" name="MySQL" />
+            <Skill image="https://static-00.iconduck.com/assets.00/postgresql-icon-1987x2048-v2fkmdaw.png" name="PostgreSQL" />
             <Skill image="https://www.svgrepo.com/show/354202/postman-icon.svg" name="Postman" />
             <Skill image="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3253808/git-icon-icon-md.png" name="Git" />
             <Skill image="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" name="Docker" />
@@ -65,28 +66,33 @@ function App() {
               
           <div style={{ maxWidth: "100%", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
             <Project name="AdMon"
-                     descricao='Um gerenciador de validade para comerciantes, onde é possível cadastrar os dados dos produtos e receber 
-                     avisos quando os produtos estiverem próximos do vencimento. Desenvolvido em Java com Spring.​' 
+                     descricao='Um gerenciador financeiro que lhe ajuda a organizar suas finanças com o cadastro de entradas e saídas, com um dashboard exibindo
+                     dados do mês atual em gráficos para melhor visualização dos dados. Feito em Java com Spring e MySQL​' 
                      github="https://github.com/Guilherme0112/AdMon"
                      deploy="" /> 
             <Project name="Verval"
                      descricao='Um gerenciador de validade para comerciantes, onde é possível cadastrar os dados dos 
-                     produtos e receber avisos quando os produtos estiverem próximos do vencimento. Desenvolvido em Java com Spring e NextJS.​​' 
+                     produtos e receber avisos quando os produtos estiverem próximos do vencimento. Desenvolvido em Java com Spring, NextJS e MySQL.​​' 
                      github="https://github.com/Guilherme0112/Verval"
+                     deploy="" /> 
+            <Project name="ConfeitaAqui"
+                     descricao='Uma aplicação web completa desenvolvida com Vue.js, Laravel e PostgreSQL. O sistema permite o cadastro de confeitarias e seus respectivos produtos, com uma interface moderna e intuitiva. 
+                     Com o Leaflet.js, o usuário pode visualizar no mapa as confeitarias mais próximas da sua localização atual.​​' 
+                     github="https://github.com/Guilherme0112/ConfeitaAqui"
                      deploy="" /> 
             <Project name="Curriculados"
                      descricao='Plataforma que permite criar currículos de maneira fácil e prática. Oferece vários modelos pré-definidos, onde
-                      o usuário apenas insere as informações desejadas no formulário ee depois é renderizada nos templates. Desenvolvido em PHP com Laravel.​​' 
+                      o usuário apenas insere as informações desejadas no formulário ee depois é renderizada nos templates. Desenvolvido em PHP com Laravel e MySQL.​​' 
                      github="https://github.com/Guilherme0112/Curriculados"
                      deploy="" /> 
             <Project name="FutOne"
                      descricao='Projeto de portal de notícias sobre games, onde os usuários podem fazer postagens inserindo uma imagem, um título e o conteúdo.
-                     Também foi feito o uso do Fecth API para possibilitar a rolagem infinita na tela de início, foi feito com NodeJS e ExpressJS.​' 
+                     Também foi feito o uso do Fecth API para possibilitar a rolagem infinita na tela de início, foi feito em NodeJS com ExpressJS e MySQL.​' 
                      github="https://github.com/Guilherme0112/FutOne"
                      deploy="" /> 
             <Project name="ComPrei"
-                     descricao='Um e-commerce básico com as funcionalidades básicas para o funcionamento, ele também é integrado com o gateway de pagamento do mercado pago.​
-                     Foi desenvolvido com Java e Spring.' 
+                     descricao='Um e-commerce básico com as funcionalidades básicas como o de cadastro de produtos, painel para admin, carrinho de compras. Ele também é integrado com o gateway de pagamento do mercado pago.
+                      Foi desenvolvido com Java e Spring e MySQL.' 
                      github="https://github.com/Guilherme0112/ComPrei"
                      deploy="" /> 
             <Project name="DashFreela"
