@@ -43,9 +43,10 @@ function Header() {
     return (
         <header className={`header ${isScrollingDown ? 'header-hidden' : ''}`}>
             <nav style={{ width: "100%" }}>
-                <a onClick={() => scrollPara("projetos")}>Projetos</a>
                 <a onClick={() => scrollPara("sobre")}>Sobre mim</a>
                 <a onClick={() => scrollPara("skills")}>Skills</a>
+                <a onClick={() => scrollPara("experiencias")}>Experiências</a>
+                <a onClick={() => scrollPara("projetos")}>Projetos</a>
                 <a onClick={() => scrollPara("estudos")}>Estudos</a>
                 <div
                     onMouseEnter={() => setShowOptions(true)}

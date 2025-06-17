@@ -3,8 +3,9 @@ import Header from './components/Header';
 import FadeInSection from './components/FadeInSection';
 import About from './components/About';
 import Skill from './components/Skills';
-import Studies from './components/Studies';
 import Project from './components/Project';
+import Studies from './components/Studies';
+import Experience from './components/Experience';
 import style from "./css/Components.module.css";
 
 function App() {
@@ -58,6 +59,31 @@ function App() {
             <Skill image="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" name="Docker" />
           </div>
         </section>
+
+      <section id='experiencias'>
+        <div style={{ width: "100%", margin: "20px 0" }}>
+            <h1>Experiências</h1>
+        </div>
+        <div style={{ maxWidth: "100%", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          <Experience 
+            empresa="Athena Office" 
+            cargo="Estagiário de TI" 
+            periodo="02/2025 - atual" 
+            descricao="Na Athena Office, atuei no desenvolvimento e manutenção de sistemas internos utilizando Laravel e Vue.js, 
+            contribuindo para a evolução e estabilidade das plataformas da empresa. Além disso, desenvolvi automações de processos 
+            utilizando Python e Make (antigo Integromat), otimizando fluxos operacionais e reduzindo tarefas manuais, o que gerou ganho
+            de produtividade para diversas áreas." />
+
+          <Experience 
+            empresa="Freelancer" 
+            cargo="Desenvolvedor Full Stack" 
+            periodo="-" 
+            descricao="Atuei como desenvolvedor freelancer em projetos Full Stack, participando de todas as etapas do desenvolvimento, 
+            desde a modelagem de banco de dados até a implementação do front-end. Trabalhei principalmente com as tecnologias React, 
+            Laravel, Spring Framework e PostgreSQL, sempre focado em entregar soluções modernas, escaláveis e de alta performance, 
+            alinhadas às necessidades dos clientes." />
+        </div>
+      </section>
 
         <section id='projetos'>
           <div style={{ width: "100%", margin: "20px 0" }}>

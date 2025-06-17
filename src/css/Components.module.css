@@ -46,6 +46,74 @@
   opacity: 1;
 }
 
+/* Template para experiência */
+.experience_card {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px;
+  width: 400px;
+  color: white;
+  box-shadow: 0 0 20px #00000055;
+  overflow: hidden;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.experience_card:hover {
+  transform: translateY(-5px);
+}
+
+.experience_card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #ffffff18 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.experience_card:hover::before {
+  opacity: 1;
+}
+
+.experience_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cargo {
+  font-size: 22px;
+  margin: 0;
+}
+
+.empresa {
+  font-size: 16px;
+  color: #999;
+}
+
+.periodo {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.descricao {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
 /* Template de projeto */
 .project_card {
   position: relative;
