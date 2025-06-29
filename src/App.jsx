@@ -53,7 +53,7 @@ function App() {
             <Skill image="https://impactclient.net/img/java-icon.png" name="Java" />
             <Skill image="https://cdn.worldvectorlogo.com/logos/spring-3.svg" name="Spring" />
             <Skill image="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" name="MySQL" />
-            <Skill image="https://static-00.iconduck.com/assets.00/postgresql-icon-1987x2048-v2fkmdaw.png" name="PostgreSQL" />
+            <Skill image="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" name="PostgreSQL" />
             <Skill image="https://www.svgrepo.com/show/354202/postman-icon.svg" name="Postman" />
             <Skill image="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3253808/git-icon-icon-md.png" name="Git" />
             <Skill image="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" name="Docker" />
@@ -77,7 +77,7 @@ function App() {
           <Experience 
             empresa="Freelancer" 
             cargo="Desenvolvedor Full Stack" 
-            periodo="-" 
+            periodo="05/2025 - atual" 
             descricao="Atuei como desenvolvedor freelancer em projetos Full Stack, participando de todas as etapas do desenvolvimento, 
             desde a modelagem de banco de dados até a implementação do front-end. Trabalhei principalmente com as tecnologias React, 
             Laravel, Spring Framework e PostgreSQL, sempre focado em entregar soluções modernas, escaláveis e de alta performance, 
@@ -90,7 +90,7 @@ function App() {
             <h1>Projetos</h1>
           </div>
               
-          <div style={{ maxWidth: "100%", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          <div style={{ width: "100%", display: "flex", justifyContent: "center", flexWrap: "wrap", alignItems: "start" }}>
             <Project name="AdMon"
                      descricao='Um gerenciador financeiro que lhe ajuda a organizar suas finanças com o cadastro de entradas e saídas, com um dashboard exibindo
                      dados do mês atual em gráficos para melhor visualização dos dados. Feito em Java com Spring e MySQL​' 
@@ -124,6 +124,11 @@ function App() {
             <Project name="DashFreela"
                      descricao='Dashboard que auxilia freelancers a organizar seus serviços. O front-end é feito com HTML, CSS (Bootstrap) e JavaScript, enquanto o back-end utiliza PHP orientado a objetos e banco de dados MySQL.​' 
                      github="https://github.com/Guilherme0112/ComPrei"
+                     deploy="" /> 
+            <Project name="ControlAccess"
+                     descricao='Sistema onde o administrador cadastra correspondências recebidas e notifica os usuários por e-mail. Os clientes acessam a plataforma para visualizar os registros e autorizar a abertura.
+                     Após a autorização, o administrador pode anexar o conteúdo digitalizado. Assim que o anexo é enviado, o usuário recebe uma notificação por e-mail automaticamente.​' 
+                     github="https://github.com/Guilherme0112/ControlAccess"
                      deploy="" /> 
           </div>
         </section>

@@ -1,6 +1,6 @@
 import style from "../css/Components.module.css"
 
-function Skills({ name, descricao, github, deploy }) {
+function Project({ name, descricao, github, deploy }) {
 
     return (
 
@@ -27,4 +27,4 @@ function Skills({ name, descricao, github, deploy }) {
     )
 }
 
-export default Skills;
+export default Project;
