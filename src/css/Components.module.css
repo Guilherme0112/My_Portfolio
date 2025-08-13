@@ -114,6 +114,19 @@
 }
 
 
+.stack_container {
+  display: flex;
+  gap: 8px; /* espaço entre as imagens */
+  margin: 15px 0;
+}
+
+.stack_image {
+  width: 24px; /* imagem pequena */
+  height: 24px;
+  object-fit: contain;
+}
+
+
 /* Template de projeto */
 .project_card {
   position: relative;
