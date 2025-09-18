@@ -126,6 +126,47 @@
   object-fit: contain;
 }
 
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7); /* deixa o fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: all; /* bloqueia clique atrás */
+}
+
+.modal_content {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  pointer-events: auto; /* garante que conteúdo continua clicável */
+}
+
+
+.close_button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.video_wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+
 
 /* Template de projeto */
 .project_card {
@@ -135,6 +176,7 @@
   border-radius: 10px;
   padding: 24px;
   width: 400px;
+  z-index: 1;
   height: auto;
   color: white;
   box-shadow: 0 0 20px #00000055;
@@ -159,6 +201,7 @@
   filter: blur(40px);
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
   z-index: -1;
 }
 
@@ -183,7 +226,7 @@
   margin-top: 20px;
 }
 
-.buttons a {
+.buttons a, button {
   flex: 1;
   text-align: center;
   text-decoration: none;
@@ -194,8 +237,24 @@
   transition: background-color 0.3s;
 }
 
-.buttons a:hover {
+.buttons a:hover, button:hover {
   background-color: #0056b3;
+}
+
+.button1 {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2ec036;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  border: 0;
+}
+
+.button1:hover {
+  background-color: #109217;
 }
 
 /* Botão */

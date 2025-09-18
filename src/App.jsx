@@ -8,8 +8,12 @@ import Studies from './components/Studies';
 import Experience from './components/Experience';
 import style from "./css/Components.module.css";
 import ShootingStars from './components/ShootingStarts';
+import { ModalVideo } from './components/ModalVideo';
+import { useState } from 'react';
 
 function App() {
+
+  const [linkvideo, steLinkVideo] = useState("");
 
   const downloadCV = () => {
     const link = document.createElement('a');
@@ -20,6 +24,9 @@ function App() {
     document.body.removeChild(link);
   }
 
+  const setarLinkDoVideo = (link) => {
+    steLinkVideo(link);
+  }
 
   return (
 
@@ -46,7 +53,7 @@ function App() {
 
             <div style={{ maxWidth: "1200px", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
               <Skill image="https://www.svgrepo.com/show/374118/tailwind.svg" name="Tailwind" />
-              <Skill image="https://th.bing.com/th/id/R.7321a5c4e2a5df026a063e326b36bfe9?rik=WMGH49RNFxeF%2bQ&pid=ImgRaw&r=0" name="Bootstrap" />
+              <Skill image="https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg" name="TypeScript" />
               <Skill image="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" name="JavaScript" />
               <Skill image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" name="React" />
               <Skill image="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" name="PHP" />
@@ -70,7 +77,7 @@ function App() {
               <Experience
                 empresa="Athena Office"
                 cargo="Estagiário de TI"
-                periodo="02/2025 - atual"
+                periodo="Fev 2025 - atual"
                 descricao="Na Athena Office, atuei no desenvolvimento e manutenção de sistemas internos utilizando Laravel e Vue.js, 
             contribuindo para a evolução e estabilidade das plataformas da empresa. Além disso, desenvolvi automações de processos 
             utilizando Python e Make (antigo Integromat), otimizando fluxos operacionais e reduzindo tarefas manuais, o que gerou ganho
@@ -79,7 +86,7 @@ function App() {
               <Experience
                 empresa="Freelancer"
                 cargo="Desenvolvedor Full Stack"
-                periodo="05/2025 - atual"
+                periodo="Mai 2025 - atual"
                 descricao="Desenvolvi diversos projetos como freelancer, atuando em diferentes áreas e tecnologias, mas o destaque foi o desenvolvimento de um ERP voltado para gráficas, focado em otimizar a gestão dos processos internos dessas empresas. O sistema permite cadastro detalhado de clientes, orçamentos, pedidos e controle de produção, facilitando o acompanhamento de cada etapa. Com dashboards que exibem dados em tempo real, oferece visibilidade clara sobre prazos, custos e status dos pedidos para decisões ágeis. Atuei em todas as etapas do desenvolvimento Full Stack, da modelagem do banco ao front-end, usando principalmente React, Spring Framework e PostgreSQL. Sempre busquei entregar soluções modernas, escaláveis e de alta performance, alinhadas às necessidades dos clientes." />
             </div>
           </section>
@@ -121,6 +128,8 @@ function App() {
                   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
                   "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
                 ]}
+                video="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7323866404384919552?compact=1"
+                setarLinkDoVideo={setarLinkDoVideo}
               />
               <Project name="Curriculados"
                 descricao='Plataforma prática e acessível para criação rápida de currículos personalizados. O usuário escolhe entre diversos modelos pré-formatados e simplesmente preenche um formulário com suas informações, que são automaticamente inseridas no template selecionado. O sistema simplifica o processo de elaboração do currículo, eliminando a necessidade de conhecimento técnico em design ou formatação, garantindo um resultado profissional com pouco esforço. Ideal para quem busca agilidade e qualidade na apresentação do seu perfil profissional.​​'
@@ -189,10 +198,12 @@ function App() {
                   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
                   "https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
                 ]}
-
+                video="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7348174085983502336?compact=1"
+                setarLinkDoVideo={setarLinkDoVideo}
               />
-              <Project name="DashTask"
-                descricao='Um gerenciador de frotas que permite controlar facilmente as frotas cadastradas pelo usuário. É possível definir o valor cobrado por quilômetro rodado, ajustando a cobrança conforme a necessidade. O sistema oferece um dashboard organizado em colunas que mostram entradas e saídas, facilitando a visualização e o acompanhamento financeiro. A interface é simples e funcional, auxiliando na gestão eficiente e na tomada de decisões baseadas em dados claros e atualizados.​'
+              <Project
+                name="DashTask"
+                descricao="Um gerenciador de frotas que permite controlar facilmente as frotas cadastradas pelo usuário. É possível definir o valor cobrado por quilômetro rodado, ajustando a cobrança conforme a necessidade. O sistema oferece um dashboard organizado em colunas que mostram entradas e saídas, facilitando a visualização e o acompanhamento financeiro. A interface é simples e funcional, auxiliando na gestão eficiente e na tomada de decisões baseadas em dados claros e atualizados.​"
                 github="https://github.com/Guilherme0112/DashTask"
                 deploy=""
                 stackImages={[
@@ -201,9 +212,15 @@ function App() {
                   "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
                   "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
                 ]}
-
+                video="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7329623364786982913?compact=1"
+                setarLinkDoVideo={setarLinkDoVideo}
               />
+
+
             </div>
+
+
+            {linkvideo && (<ModalVideo videoUrl={linkvideo} onClose={() => setarLinkDoVideo("")} />)}
           </section>
 
           <section id='estudos'>
@@ -216,7 +233,7 @@ function App() {
                 unidadeP="DevMedia"
                 periodoP="Julho de 2024" />
               <Studies cursoP="Sistemas para Internet"
-                unidadeP="UNIPÊ"
+                unidadeP="UNIPÊ - Centro Universitário de João Pessoa"
                 periodoP="Janeiro de 2024 - em andamento" />
               <Studies cursoP="PHP POO"
                 unidadeP="DevMedia"

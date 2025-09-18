@@ -1,4 +1,7 @@
+import { useState } from "react"
 import style from "../css/Components.module.css"
+
+const classButton = "background-color: green";
 
 function StackImages({ images }) {
   return (
@@ -15,7 +18,10 @@ function StackImages({ images }) {
   )
 }
 
-function Project({ name, descricao, github, deploy, stackImages = [] }) {
+
+function Project({ name, descricao, github, deploy, stackImages = [], video, setarLinkDoVideo }) {
+
+  
   return (
     <div className={style.project_card}>
       <div className={style.project_title}>{name}</div>
@@ -26,15 +32,21 @@ function Project({ name, descricao, github, deploy, stackImages = [] }) {
           href={deploy || "#"}
           target="_blank"
           style={{
-            pointerEvents: deploy ? 'auto' : 'none',
+            pointerEvents: deploy ? "auto" : "none",
             opacity: deploy ? 1 : 0.5,
-            cursor: deploy ? 'pointer' : 'not-allowed'
+            cursor: deploy ? "pointer" : "not-allowed",
           }}
         >
           Ver Deploy
         </a>
-        <a href={github} target="_blank">Repositório</a>
+        <a href={github} target="_blank">
+          Repositório
+        </a>
+        {video && (
+          <button onClick={() => setarLinkDoVideo(video)} className={style.button1}>Ver Vídeo</button>
+        )}
       </div>
+
     </div>
   )
 }
