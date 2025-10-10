@@ -1,0 +1,109 @@
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #30363d;
+  z-index: 0;
+}
+
+.timeline_item {
+  position: relative;
+  width: 50%;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+  text-align: right;
+}
+
+.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline_item::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background-color: #58a6ff;
+  border-radius: 50%;
+  border: 2px solid #0d1117;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.left::before {
+  right: -8px;
+}
+
+.right::before {
+  left: -8px;
+}
+
+.timeline_item:hover::before {
+  transform: scale(1.2);
+}
+
+.cargo {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #f0f6fc;
+}
+
+.empresa {
+  display: block;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.periodo {
+  font-size: 0.85rem;
+  color: #9da5b4;
+  margin-top: 4px;
+}
+
+.descricao {
+  font-size: 0.95rem;
+  color: #9da5b4;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline_item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+    text-align: left !important;
+  }
+
+  .timeline_item::before {
+    left: 12px;
+    right: auto;
+  }
+}

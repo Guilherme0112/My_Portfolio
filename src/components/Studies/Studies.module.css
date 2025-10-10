@@ -1,0 +1,45 @@
+.course_card {
+  background-color: #1a1a1a;
+  padding: 20px 25px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  margin: 10px;
+}
+
+.course_card:hover {
+  transform: translateY(-5px);
+}
+
+.course_header {
+  margin-bottom: 10px;
+}
+
+.course_name {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #f0f6fc;
+}
+
+.institution {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.course_period {
+  font-size: 0.85rem;
+  color: #9da5b4;
+  margin-bottom: 10px;
+}
+
+.certificate {
+  font-size: 0.9rem;
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.certificate:hover {
+  color: #1f6feb;
+}

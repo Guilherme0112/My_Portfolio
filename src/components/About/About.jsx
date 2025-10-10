@@ -2,11 +2,11 @@ function About() {
     return (
 
         <section id="sobre">
-            <div>
+            <div className="my-[50px]">
                 <h1>Sobre mim</h1>
             </div>
-            <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
-                <p style={{ width: "80%", margin: "10px 0"}}>
+            <div className="flex justify-center my-[20px]">
+                <p className="w-full px-[50px]">
                     Meu nome é Guilherme, sou desenvolvedor full stack com uma paixão genuína por resolver problemas através da programação.
 
                     Programar é algo que realmente me motiva. Gosto do desafio, da lógica e da possibilidade de transformar ideias em soluções reais. Sou uma pessoa muito curiosa, estou sempre buscando entender como as coisas funcionam por trás dos bastidores, o que me leva a aprender constantemente novas ferramentas, linguagens e conceitos.

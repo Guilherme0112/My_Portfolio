@@ -1,0 +1,46 @@
+.skill {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  color: white;
+
+  cursor: auto;
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.skill::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ffffff36 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+.skill:hover{
+  transform: translateY(-5px);
+}
+.skill:hover::before {
+  opacity: 1;
+}

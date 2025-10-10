@@ -1,7 +1,4 @@
-import { useState } from "react"
-import style from "../css/Components.module.css"
-
-const classButton = "background-color: green";
+import style from "./Project.module.css"
 
 function StackImages({ images }) {
   return (
@@ -20,7 +17,6 @@ function StackImages({ images }) {
 
 
 function Project({ name, descricao, github, deploy, stackImages = [], video, setarLinkDoVideo }) {
-
   
   return (
     <div className={style.project_card}>

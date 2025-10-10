@@ -1,6 +1,6 @@
-import style from "../css/Components.module.css"
+import style from "./Skill.module.css"
 
-function Skills({image, name}){
+function Skill({image, name}){
     
     return (
 
@@ -11,4 +11,4 @@ function Skills({image, name}){
     )
 }
 
-export default Skills;
+export default Skill;
