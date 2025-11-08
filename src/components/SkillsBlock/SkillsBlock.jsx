@@ -13,7 +13,7 @@ export default function SkillsBlock() {
     { image: "https://cdn.worldvectorlogo.com/logos/spring-3.svg", name: "Spring" },    
     { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg", name: "MySQL" },
     { image: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png", name: "PostgreSQL" },
-    { image: "https://www.svgrepo.com/show/354202/postman-icon.svg", name: "Postman" }, 
+    { image: "https://images.archbee.com/PL8X94efBsjvhfQV3wyyj-fMzoU2zBbnzXG5pDzUALe-20250908-073345.png?format=webp", name: "MongoDB" }, 
     { image: "https://svn.apache.org/repos/asf/kafka/site/logos/originals/png/ICON%20-%20White%20on%20Transparent.png", name: "Apache Kafka" },
     { image: "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3253808/git-icon-icon-md.png", name: "Git" },
     { image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png", name: "Docker" }
