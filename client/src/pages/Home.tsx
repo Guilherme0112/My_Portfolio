@@ -29,7 +29,6 @@ import { motion } from "framer-motion";
 import { useTheme } from "@/contexts/ThemeContext";
 import ProjectVideo from "@/components/ProjectVideo";
 
-
 const skills = [
   { name: "Tailwind", icon: SiTailwindcss, category: "CSS" },
   { name: "TypeScript", icon: SiTypescript, category: "Linguagem" },
@@ -78,49 +77,81 @@ const projects = [
     description:
       "Gerenciador financeiro focado em organização pessoal e controle de fluxo de caixa. Permite registrar entradas e saídas de forma detalhada, categorizando cada transação para facilitar a análise. Oferece um dashboard intuitivo que apresenta gráficos e indicadores atualizados em tempo real, facilitando a visualização clara do comportamento financeiro ao longo do mês. Com funcionalidades que auxiliam no planejamento, o sistema ajuda o usuário a identificar padrões de gastos, prever despesas futuras e tomar decisões mais informadas para melhorar a saúde financeira. A interface é simples e objetiva, priorizando a usabilidade para que o gerenciamento seja ágil e eficiente.",
     tags: ["React", "Dashboard", "Finanças"],
-    links: { repo: "https://github.com/Guilherme0112/AdMon", demo: "#", video:  "#" },
+    links: {
+      repo: "https://github.com/Guilherme0112/AdMon",
+      demo: "#",
+      video: "#",
+    },
   },
   {
     name: "ConfeitaAqui",
     description:
       "Aplicação web robusta voltada para o segmento de confeitarias, oferecendo funcionalidades para cadastro detalhado de estabelecimentos e seus produtos. A interface foi pensada para ser moderna e intuitiva, facilitando a navegação e o uso tanto para administradores quanto para usuários finais. Um diferencial importante é a integração com mapas, que permite ao usuário localizar as confeitarias mais próximas à sua posição atual, tornando a experiência mais prática e direcionada. O sistema atende tanto às necessidades de gestão quanto à usabilidade, garantindo eficiência e satisfação no uso diário.",
     tags: ["Web App", "Mapas", "E-commerce"],
-    links: { repo: "https://github.com/Guilherme0112/ConfeitaAqui", demo: "#", video: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7323866404384919552?compact=1" },
+    links: {
+      repo: "https://github.com/Guilherme0112/ConfeitaAqui",
+      demo: "#",
+      video:
+        "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7323866404384919552?compact=1",
+    },
   },
   {
     name: "FutOne",
     description:
       "Portal de notícias focado no universo dos games, que permite aos usuários criar postagens contendo imagem, título e texto, fomentando uma comunidade ativa e participativa. A interface implementa rolagem infinita por meio da Fetch API, garantindo uma navegação fluida e contínua sem recarregamento da página. O sistema é pensado para oferecer uma experiência dinâmica e envolvente, facilitando o acesso a conteúdos atualizados e promovendo interação constante entre os usuários.",
     tags: ["Portal", "Comunidade", "Fetch API"],
-    links: { repo: "https://github.com/Guilherme0112/FutOne", demo: "#", video:  "#" },
+    links: {
+      repo: "https://github.com/Guilherme0112/FutOne",
+      demo: "#",
+      video: "#",
+    },
   },
   {
     name: "ComPrei",
     description:
       "Plataforma de e-commerce funcional que oferece recursos essenciais como cadastro de produtos, painel administrativo para gerenciamento e um sistema de carrinho de compras intuitivo. A integração com o gateway de pagamento Mercado Pago possibilita transações seguras e práticas diretamente na loja, facilitando a finalização das compras. O sistema é estruturado para suportar operações básicas de comércio eletrônico, atendendo tanto às necessidades dos administradores quanto dos clientes com uma experiência simples e eficiente.",
     tags: ["E-commerce", "Pagamentos", "Admin"],
-    links: { repo: "https://github.com/Guilherme0112/ComPrei", demo: "#", video:  "#" },
+    links: {
+      repo: "https://github.com/Guilherme0112/ComPrei",
+      demo: "#",
+      video: "#",
+    },
   },
   {
     name: "ControlAccess",
     description:
       "Sistema para gestão de correspondências que centraliza o cadastro e o monitoramento dos recebimentos. O administrador registra as correspondências e aciona notificações por e-mail para os usuários envolvidos, mantendo-os informados. Os clientes podem acessar a plataforma para visualizar os registros e autorizar a abertura da correspondência, garantindo controle e transparência no processo. Após a autorização, o administrador anexa o conteúdo digitalizado, que gera automaticamente uma nova notificação para o usuário, fechando o ciclo de comunicação de forma eficiente e segura.",
     tags: ["Gestão", "Email", "Notificações"],
-    links: { repo: "https://github.com/Guilherme0112/ControlAccess", demo: "#", video: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7348174085983502336?compact=1" },
+    links: {
+      repo: "https://github.com/Guilherme0112/ControlAccess",
+      demo: "#",
+      video:
+        "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7348174085983502336?compact=1",
+    },
   },
   {
     name: "DashTask",
     description:
       "Um gerenciador de frotas que permite controlar facilmente as frotas cadastradas pelo usuário. É possível definir o valor cobrado por quilômetro rodado, ajustando a cobrança conforme a necessidade. O sistema oferece um dashboard organizado em colunas que mostram entradas e saídas, facilitando a visualização e o acompanhamento financeiro. A interface é simples e funcional, auxiliando na gestão eficiente e na tomada de decisões baseadas em dados claros e atualizados.",
     tags: ["Frotas", "Dashboard", "Gestão"],
-    links: { repo: "https://github.com/Guilherme0112/DashTask", demo: "#", video: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7329623364786982913?compact=1" },
+    links: {
+      repo: "https://github.com/Guilherme0112/DashTask",
+      demo: "#",
+      video:
+        "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7329623364786982913?compact=1",
+    },
   },
   {
     name: "Rede",
     description:
       "Aplicação full stack inspirada no Twitter, construída com Node.js, React com TypeScript, Redux, MongoDB, JWT e Sass. O sistema oferece criação de postagens, comentários, curtidas em comentários, busca dinâmica de usuários e páginas individuais para cada perfil. A API segue boas práticas de organização e segurança com autenticação JWT, enquanto o front-end utiliza Redux para controle previsível de estado e Sass para estilização modular. O resultado é uma rede social funcional, estável e estruturada, demonstrando integração eficiente entre diversas tecnologias atuais.",
     tags: ["Social", "Full Stack", "Real-time"],
-    links: { repo: "https://github.com/Guilherme0112/Rede", demo: "#", video: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395633760316194817?compact=1" },
+    links: {
+      repo: "https://github.com/Guilherme0112/Rede",
+      demo: "#",
+      video:
+        "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395633760316194817?compact=1",
+    },
   },
 ];
 
@@ -132,9 +163,9 @@ const education = [
     link: "https://www.devmedia.com.br/certificado/conclusao/?id=179442",
   },
   {
-    title: "Sistemas para Internet",
+    title: "CST em Sistemas para Internet",
     institution: "UNIPÊ - Centro Universitário de João Pessoa",
-    date: "Janeiro de 2024 - Em andamento",
+    date: "Janeiro de 2024 - Dezembro de 2025",
     link: "#",
   },
   {
@@ -229,11 +260,7 @@ export default function Home() {
               onClick={toggleTheme}
               className="text-foreground hover:text-accent"
             >
-              {theme === "dark" ? (
-                <Sun size={18} />
-              ) : (
-                <Moon size={18} />
-              )}
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </Button>
             <Button
               asChild
@@ -241,7 +268,13 @@ export default function Home() {
               size="sm"
               className="gap-2 border-accent text-accent hover:bg-accent/10"
             >
-              <a href="/Guilherme_Mendes_Gomes.pdf" download="Guilherme_Mendes_Gomes.pdf" className="inline-flex items-center gap-2">
+              <a
+                href="/Guilherme_Mendes_Gomes.pdf"
+                download="Guilherme_Mendes_Gomes.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
                 <Download size={16} />
                 <span className="hidden sm:inline">CV</span>
               </a>
@@ -261,50 +294,86 @@ export default function Home() {
             }}
           />
         </div>
-
         <motion.div
           className="container relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="max-w-2xl">
-            <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Guilherme Mendes
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Desenvolvedor Full Stack apaixonado por resolver problemas através
-              da programação. Curiosidade, lógica e transformação de ideias em
-              soluções reais.
-            </p>
-            <div className="flex gap-4">
-              <Button
-                className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2"
-                size="lg"
-                onClick={() => window.location.href = `mailto:${email}`}
-              >
-                <Mail size={18} />
-                Entrar em Contato
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-accent text-accent hover:bg-accent/10 gap-2"
-                onClick={() => window.location.href = github}
-              >
-                <FaGithub size={18} />
-                GitHub
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-accent text-accent hover:bg-accent/10 gap-2"
-                onClick={() => window.location.href = linkedin}
-              >
-                <FaLinkedin size={18} />
-                LinkedIn
-              </Button>
+          <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="max-w-2xl">
+              <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+                Guilherme Mendes
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                Desenvolvedor Full Stack apaixonado por resolver problemas
+                através da programação. Curiosidade, lógica e transformação de
+                ideias em soluções reais.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2"
+                  size="sm"
+                  asChild
+                >
+                  <a
+                    href={`mailto:${email}`}
+                    className="inline-flex items-center gap-2"
+                  >
+                    <Mail size={18} />
+                    <span className="hidden sm:inline">Entrar em Contato</span>
+                    <span className="sm:hidden">Contato</span>
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-accent text-accent hover:bg-accent/10 gap-2"
+                  asChild
+                >
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <FaGithub size={18} />
+                    GitHub
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-accent text-accent hover:bg-accent/10 gap-2"
+                  asChild
+                >
+                  <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <FaLinkedin size={18} />
+                    LinkedIn
+                  </a>
+                </Button>
+              </div>
             </div>
+            <motion.div
+              className="flex justify-center items-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative w-full max-w-sm">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-transparent rounded-full blur-3xl" />
+                <img
+                  src="/guilherme-foto.jpg"
+                  alt="Guilherme Mendes"
+                  className="relative w-full aspect-square object-cover rounded-full border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 shadow-lg hover:shadow-accent/20"
+                />
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -341,14 +410,17 @@ export default function Home() {
             bastidores, o que me leva a aprender constantemente novas
             ferramentas, linguagens e conceitos. Tenho facilidade para aprender
             e me adaptar a novas tecnologias, o que me ajuda a evoluir
-            rapidamente em projetos e equipes. Estou sempre pronto para
-            encarar novos desafios e crescer como desenvolvedor.
+            rapidamente em projetos e equipes. Estou sempre pronto para encarar
+            novos desafios e crescer como desenvolvedor.
           </motion.p>
         </motion.div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 border-t border-border bg-secondary/30">
+      <section
+        id="skills"
+        className="py-20 border-t border-border bg-secondary/30"
+      >
         <motion.div
           className="container"
           initial="hidden"
@@ -399,9 +471,7 @@ export default function Home() {
                 key={idx}
                 className="border-l-2 border-accent pl-6 py-4 cursor-pointer hover:pl-8 transition-all"
                 variants={itemVariants}
-                onClick={() =>
-                  setExpandedExp(expandedExp === idx ? null : idx)
-                }
+                onClick={() => setExpandedExp(expandedExp === idx ? null : idx)}
               >
                 <div className="flex items-start justify-between">
                   <div>
@@ -409,7 +479,9 @@ export default function Home() {
                       {exp.title}
                     </h3>
                     <p className="text-accent font-semibold">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground">{exp.period}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {exp.period}
+                    </p>
                     <p className="text-sm text-gray-400">{exp.description}</p>
                   </div>
                 </div>
@@ -420,7 +492,10 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 border-t border-border bg-secondary/30">
+      <section
+        id="projects"
+        className="py-20 border-t border-border bg-secondary/30"
+      >
         <motion.div
           className="container"
           initial="hidden"
@@ -456,14 +531,18 @@ export default function Home() {
                 <div className="flex gap-3">
                   <a
                     href={project.links.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-accent hover:text-accent/80 transition-colors flex items-center gap-1 text-sm"
                   >
                     <FaGithub size={16} />
                     Repositório
                   </a>
-                  {project.links.demo  != "#" && (
+                  {project.links.demo != "#" && (
                     <a
                       href={project.links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-accent hover:text-accent/80 transition-colors flex items-center gap-1 text-sm"
                     >
                       <ExternalLink size={16} />
@@ -471,7 +550,10 @@ export default function Home() {
                     </a>
                   )}
                   {project.links.video != "#" && (
-                    <ProjectVideo videoUrl={project.links.video} title={project.name} />
+                    <ProjectVideo
+                      videoUrl={project.links.video}
+                      title={project.name}
+                    />
                   )}
                 </div>
               </motion.div>
@@ -505,12 +587,13 @@ export default function Home() {
                 {edu.link != "#" && (
                   <a
                     href={edu.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-accent hover:text-accent/80 transition-colors text-sm mt-2 inline-flex items-center gap-1"
                   >
                     Ver certificado <ExternalLink size={14} />
                   </a>
-                )
-                }
+                )}
               </motion.div>
             ))}
           </div>
@@ -539,26 +622,29 @@ export default function Home() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2"
             >
-                <a
-                  href={`mailto:${email}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = `mailto:${email}`;
-                  }}
-                  className="inline-flex items-center gap-2"
-                >
-                  <Mail size={18} />
-                  Email
-                </a>
+              <a
+                href={`mailto:${email}`}
+                className="inline-flex items-center gap-2"
+              >
+                <Mail size={18} />
+                Email
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-accent text-accent hover:bg-accent/10 gap-2"
-              onClick={() => window.location.href = github}
+              asChild
             >
-              <FaGithub size={18} />
-              GitHub
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                <FaGithub size={18} />
+                GitHub
+              </a>
             </Button>
           </div>
         </motion.div>
