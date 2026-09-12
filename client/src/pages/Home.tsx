@@ -51,23 +51,67 @@ const experiences = [
   {
     title: "Desenvolvedor Web Júnior",
     company: "Athena Office",
-    period: "Nov 2025 - Atual",
-    description:
-      "Atuei como Desenvolvedor Júnior com foco em Laravel e Vue.js (TypeScript), participando ativamente da manutenção e evolução de sistemas em produção, desde a modelagem de entidades até a definição de regras de negócio e fluxos operacionais. Implementei processos assíncronos com filas para rotinas críticas, como emissão de notas fiscais e disparo de e-mails, integrei APIs externas e soluções de IA para automação de conteúdo em WordPress, e utilizei Docker para padronização de ambientes e melhoria do fluxo de deploy, garantindo maior estabilidade, escalabilidade e qualidade técnica das aplicações.",
+    period: "Nov 2025 – Atual",
+    technologies: [
+      "PHP",
+      "Laravel",
+      "Vue.js",
+      "TypeScript",
+      "Docker",
+      "WebSockets",
+      "Queues (Filas)",
+      "APIs REST & IA",
+    ],
+    highlights: [
+      "Arquitetou e implementou o módulo financeiro de pagamentos com fluxo de aprovação em dois níveis, conciliação e liquidação automática via API bancária e notificações transacionais em tempo real.",
+      "Desenvolveu o portal corporativo de RH de ponta a ponta, contemplando gestão de colaboradores, prontuários, motor de avaliação de desempenho integrado ao ponto eletrônico e análise assistida por Inteligência Artificial.",
+      "Projetou arquitetura de filas assíncronas (Queues) no ERP para automação de aditivos contratuais, cancelamentos e disparo automático para plataformas de assinatura digital.",
+      "Implementou comunicação bidirecional em tempo real via WebSockets para o sistema de chamados internos, eliminando consultas contínuas por polling.",
+      "Construiu relatórios analíticos de alta performance e formulários externos dinâmicos para captura e conversão eficiente de leads.",
+      "Padronizou ambientes conteinerizados com Docker e aplicou rotinas de testes automatizados (unitários e de integração), elevando a estabilidade de entregas contínuas em produção.",
+    ],
   },
   {
-    title: "Estágio em Desenvolvimento de Software",
+    title: "Estagiário em TI & Desenvolvimento",
     company: "Athena Office",
-    period: "Fev 2025 - Nov 2025",
-    description:
-      "Automatizei processos internos utilizando Python e Make (Integromat), reduzindo significativamente o tempo gasto em tarefas repetitivas e permitindo que a equipe focasse em atividades estratégicas. Atuei também na manutenção e evolução de sistemas internos com Vue.js, PHP e Laravel, corrigindo bugs, implementando melhorias contínuas e otimizando a experiência do usuário e fluxos operacionais.",
+    period: "Fev 2025 – Nov 2025",
+    technologies: [
+      "Python",
+      "Make (Integromat)",
+      "PHP",
+      "Laravel",
+      "Vue.js",
+      "Automação",
+      "IA",
+    ],
+    highlights: [
+      "Automatizou fluxos e pipelines de processos críticos com Python e Make (Integromat) integrados a serviços de Inteligência Artificial, reduzindo o tempo operacional gasto em tarefas manuais repetitivas.",
+      "Atuou na sustentação, correção de bugs e evolução contínua de sistemas internos utilizando PHP (Laravel) e Vue.js.",
+      "Refatorou componentes reutilizáveis de interface e fluxos de usuário (UX/UI), garantindo maior responsividade, consistência visual e velocidade de carregamento.",
+      "Estruturou documentações técnicas de regras de negócio, rotinas de integração de APIs e procedimentos operacionais.",
+    ],
   },
   {
     title: "Desenvolvedor Full Stack",
     company: "Freelancer",
-    period: "",
-    description:
-      "Desenvolvi uma aplicação Full Stack para um ERP de gráficas utilizando Spring e React, estruturada em uma arquitetura monolítica modular, com funcionalidades de cadastro de clientes, orçamentos e pedidos, anexação e gerenciamento de arquivos e acompanhamento financeiro em tempo real. Integrei a aplicação com AWS S3 para armazenamento de arquivos, utilizei React Query para cache e sincronização eficiente de dados no front-end e implementei índices no banco de dados para otimização de consultas críticas, resultando em melhor desempenho, escalabilidade e eficiência operacional.",
+    period: "2024 – Atual",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "AWS S3",
+      "PostgreSQL",
+      "React Query",
+      "Docker",
+    ],
+    highlights: [
+      "Projetou e construiu um sistema ERP modular para gráficas com backend em Java (Spring Boot) estruturado sob princípios de Arquitetura Limpa e frontend moderno em React com TypeScript.",
+      "Integrou armazenamento em nuvem via AWS S3 para upload e gerenciamento seguro de arquivos de alta resolução vinculados a ordens de serviço e orçamentos.",
+      "Otimizou consultas e índices em banco de dados relacional (PostgreSQL/MySQL), acelerando consideravelmente o processamento de relatórios analíticos e fluxo de caixa.",
+      "Implementou gerenciamento de estado assíncrono com React Query (TanStack Query), com caching inteligente, pré-busca de dados e sincronização sem recarregamentos.",
+      "Estruturou APIs RESTful seguras com autenticação JWT, controle granular de permissões (RBAC) e validações transacionais protegidas.",
+    ],
   },
 ];
 
@@ -185,6 +229,18 @@ const education = [
     institution: "DevMedia",
     date: "Dezembro de 2024",
     link: "https://www.devmedia.com.br/certificado/unificado/java/guilherme-gomes-20",
+  },
+  {
+    title: "NodeJS: Introdução",
+    institution: "DevMedia",
+    date: "Agosto de 2024",
+    link: "https://www.devmedia.com.br/certificado/conclusao/?id=180261",
+  },
+  {
+    title: "Primeiros passos com Express",
+    institution: "DevMedia",
+    date: "Agosto de 2024",
+    link: "https://www.devmedia.com.br/certificado/conclusao/?id=180347",
   },
 ];
 
@@ -306,9 +362,11 @@ export default function Home() {
                 Guilherme Mendes
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Desenvolvedor Full Stack apaixonado por resolver problemas
-                através da programação. Curiosidade, lógica e transformação de
-                ideias em soluções reais.
+                Desenvolvedor Full Stack especializado em{" "}
+                <span className="text-foreground font-semibold">PHP (Laravel)</span>,{" "}
+                <span className="text-foreground font-semibold">Java (Spring)</span> e ecossistemas{" "}
+                <span className="text-foreground font-semibold">Vue.js & React (TypeScript)</span>.
+                Foco em Arquitetura Limpa, processamento assíncrono e aplicações escaláveis.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button
@@ -398,21 +456,17 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12 text-foreground">
             Sobre Mim
           </h2>
-          <motion.p
-            className="text-lg text-muted-foreground leading-relaxed max-w-3xl"
-            variants={itemVariants}
-          >
-            Sou um desenvolvedor full stack com paixão genuína por resolver
-            problemas através da programação. Programar é algo que realmente me
-            motiva. Gosto do desafio, da lógica e da possibilidade de
-            transformar ideias em soluções reais. Sou uma pessoa muito curiosa,
-            estou sempre buscando entender como as coisas funcionam por trás dos
-            bastidores, o que me leva a aprender constantemente novas
-            ferramentas, linguagens e conceitos. Tenho facilidade para aprender
-            e me adaptar a novas tecnologias, o que me ajuda a evoluir
-            rapidamente em projetos e equipes. Estou sempre pronto para encarar
-            novos desafios e crescer como desenvolvedor.
-          </motion.p>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
+            <motion.p variants={itemVariants}>
+              Sou <strong className="text-foreground font-semibold">Desenvolvedor Full Stack</strong> com experiência sólida na concepção, evolução e sustentação de sistemas corporativos e aplicações web escaláveis. Minha atuação é focada no desenvolvimento de backends robustos com <span className="text-accent font-medium">PHP (Laravel)</span> e <span className="text-accent font-medium">Java (Spring Boot)</span>, combinados a frontends modernos, reativos e componentizados com <span className="text-accent font-medium">Vue.js</span>, <span className="text-accent font-medium">React</span> e <span className="text-accent font-medium">TypeScript</span>.
+            </motion.p>
+            <motion.p variants={itemVariants}>
+              Possuo vivência prática na aplicação de <strong className="text-foreground font-semibold">Arquitetura Limpa</strong>, estruturação de processamento assíncrono com <span className="text-accent font-medium">filas (Queues)</span>, comunicação bidirecional em tempo real via <span className="text-accent font-medium">WebSockets</span>, integrações com APIs bancárias e armazenamento escalável em nuvem com <span className="text-accent font-medium">AWS S3</span>. Além disso, projeto automações de processos críticos utilizando Python e soluções integradas a Inteligência Artificial.
+            </motion.p>
+            <motion.p variants={itemVariants}>
+              Atuo com padronização de ambientes conteinerizados através de <span className="text-accent font-medium">Docker</span>, aplicação de testes automatizados (unitários e de integração) e otimização de consultas e índices em bancos relacionais (PostgreSQL e MySQL), priorizando performance, estabilidade e entrega contínua de valor.
+            </motion.p>
+          </div>
         </motion.div>
       </section>
 
@@ -465,24 +519,44 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12 text-foreground">
             Experiência
           </h2>
-          <div className="space-y-4 max-w-3xl">
+          <div className="space-y-8 max-w-3xl">
             {experiences.map((exp, idx) => (
               <motion.div
                 key={idx}
-                className="border-l-2 border-accent pl-6 py-4 cursor-pointer hover:pl-8 transition-all"
+                className="border-l-2 border-accent pl-6 py-2 transition-all hover:border-accent/80"
                 variants={itemVariants}
-                onClick={() => setExpandedExp(expandedExp === idx ? null : idx)}
               >
-                <div className="flex items-start justify-between">
-                  <div>
+                <div className="flex flex-col gap-1">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="text-xl font-bold text-foreground">
                       {exp.title}
                     </h3>
-                    <p className="text-accent font-semibold">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground">
+                    <span className="text-xs font-mono text-accent bg-accent/10 px-2.5 py-0.5 rounded-full font-medium">
                       {exp.period}
-                    </p>
-                    <p className="text-sm text-gray-400">{exp.description}</p>
+                    </span>
+                  </div>
+                  <p className="text-accent font-semibold text-sm">
+                    {exp.company}
+                  </p>
+
+                  <ul className="mt-3 space-y-2.5 text-sm leading-relaxed">
+                    {exp.highlights.map((highlight, hIdx) => (
+                      <li key={hIdx} className="flex items-start gap-2.5 text-muted-foreground">
+                        <span className="text-accent mt-2 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5 mt-4 pt-1">
+                    {exp.technologies.map((tech, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-xs bg-secondary/80 border border-border text-foreground/80 px-2.5 py-0.5 rounded-md font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -572,27 +646,36 @@ export default function Home() {
           variants={containerVariants}
         >
           <h2 className="text-4xl font-bold mb-12 text-foreground">Estudos</h2>
-          <div className="space-y-4 max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {education.map((edu, idx) => (
               <motion.div
                 key={idx}
-                className="border-l-2 border-accent pl-6 py-4 hover:pl-8 transition-all"
+                className="bg-card border border-border border-l-4 border-l-accent rounded-lg p-5 hover:border-accent hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
                 variants={itemVariants}
+                whileHover={{ y: -4 }}
               >
-                <h3 className="text-lg font-bold text-foreground">
-                  {edu.title}
-                </h3>
-                <p className="text-accent font-semibold">{edu.institution}</p>
-                <p className="text-sm text-muted-foreground">{edu.date}</p>
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1 leading-snug">
+                    {edu.title}
+                  </h3>
+                  <p className="text-accent font-semibold text-sm">
+                    {edu.institution}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {edu.date}
+                  </p>
+                </div>
                 {edu.link != "#" && (
-                  <a
-                    href={edu.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-accent/80 transition-colors text-sm mt-2 inline-flex items-center gap-1"
-                  >
-                    Ver certificado <ExternalLink size={14} />
-                  </a>
+                  <div className="pt-4 mt-3 border-t border-border/50">
+                    <a
+                      href={edu.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 transition-colors text-sm inline-flex items-center gap-1.5 font-medium"
+                    >
+                      Ver certificado <ExternalLink size={14} />
+                    </a>
+                  </div>
                 )}
               </motion.div>
             ))}
