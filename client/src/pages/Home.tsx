@@ -6,6 +6,8 @@ import {
   ChevronDown,
   Moon,
   Sun,
+  Briefcase,
+  Globe,
 } from "lucide-react";
 import {
   SiTailwindcss,
@@ -55,15 +57,18 @@ const experiences = [
     technologies: [
       "PHP",
       "Laravel",
-      "Vue.js",
+      "React",
       "TypeScript",
       "Docker",
       "WebSockets",
       "Queues (Filas)",
       "APIs REST & IA",
+      "Notas Fiscais (NF-e/NFS-e)",
+      "PostgreSQL"
     ],
     highlights: [
       "Arquitetou e implementou o módulo financeiro de pagamentos com fluxo de aprovação em dois níveis, conciliação e liquidação automática via API bancária e notificações transacionais em tempo real.",
+      "Desenvolveu e integrou rotinas de faturamento e emissão de notas fiscais (NF-e/NFS-e) com suporte a multi-empresas, gerenciando validações tributárias e comunicação com serviços emissores.",
       "Desenvolveu o portal corporativo de RH de ponta a ponta, contemplando gestão de colaboradores, prontuários, motor de avaliação de desempenho integrado ao ponto eletrônico e análise assistida por Inteligência Artificial.",
       "Projetou arquitetura de filas assíncronas (Queues) no ERP para automação de aditivos contratuais, cancelamentos e disparo automático para plataformas de assinatura digital.",
       "Implementou comunicação bidirecional em tempo real via WebSockets para o sistema de chamados internos, eliminando consultas contínuas por polling.",
@@ -81,6 +86,7 @@ const experiences = [
       "PHP",
       "Laravel",
       "Vue.js",
+      "MongoDB",
       "Automação",
       "IA",
     ],
@@ -117,21 +123,20 @@ const experiences = [
 
 const projects = [
   {
-    name: "AdMon",
-    description:
-      "Gerenciador financeiro focado em organização pessoal e controle de fluxo de caixa. Permite registrar entradas e saídas de forma detalhada, categorizando cada transação para facilitar a análise. Oferece um dashboard intuitivo que apresenta gráficos e indicadores atualizados em tempo real, facilitando a visualização clara do comportamento financeiro ao longo do mês. Com funcionalidades que auxiliam no planejamento, o sistema ajuda o usuário a identificar padrões de gastos, prever despesas futuras e tomar decisões mais informadas para melhorar a saúde financeira. A interface é simples e objetiva, priorizando a usabilidade para que o gerenciamento seja ágil e eficiente.",
-    tags: ["React", "Dashboard", "Finanças"],
+    name: "Finanças",
+    description: "Desenvolvi um SaaS voltado para a gestão de finanças pessoais, projetado para oferecer controle orçamentário completo e visualização clara da saúde financeira em tempo real. A plataforma centraliza as movimentações em um dashboard analítico e dinâmico, facilitando o acompanhamento diário de receitas e despesas. Entre os principais recursos estão o cadastro e a organização estruturada de transações, a definição e o monitoramento de metas financeiras de médio e longo prazo, e a configuração de limites de gastos customizáveis por categoria. Para proporcionar maior autonomia no manuseio das informações, a plataforma conta com conexão direta à API do Mercado Pago para sincronização de dados. Além disso, possui um módulo de manipulação de arquivos que permite a importação de históricos financeiros em formato Excel e CSV, bem como a exportação de relatórios consolidados em PDF, Excel e CSV. Com isso, é possível migrar registros, analisar dados fora do sistema ou manter cópias de segurança de forma simples, prática e acessível.",
+    tags: ["SaaS", "Finanças", "PHP", "Laravel", "Vue.js", "Testes Automatizados", "PostgreSQL"],
     links: {
-      repo: "https://github.com/Guilherme0112/AdMon",
+      repo: "https://github.com/Guilherme0112/Financas",
       demo: "#",
-      video: "#",
+      video: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7510495395983155202?compact=1",
     },
   },
   {
     name: "ConfeitaAqui",
     description:
       "Aplicação web robusta voltada para o segmento de confeitarias, oferecendo funcionalidades para cadastro detalhado de estabelecimentos e seus produtos. A interface foi pensada para ser moderna e intuitiva, facilitando a navegação e o uso tanto para administradores quanto para usuários finais. Um diferencial importante é a integração com mapas, que permite ao usuário localizar as confeitarias mais próximas à sua posição atual, tornando a experiência mais prática e direcionada. O sistema atende tanto às necessidades de gestão quanto à usabilidade, garantindo eficiência e satisfação no uso diário.",
-    tags: ["Web App", "Mapas", "E-commerce"],
+    tags: ["PHP", "Laravel", "Leaflet.js", "VueJS", "PostgreSQL"],
     links: {
       repo: "https://github.com/Guilherme0112/ConfeitaAqui",
       demo: "#",
@@ -143,7 +148,7 @@ const projects = [
     name: "FutOne",
     description:
       "Portal de notícias focado no universo dos games, que permite aos usuários criar postagens contendo imagem, título e texto, fomentando uma comunidade ativa e participativa. A interface implementa rolagem infinita por meio da Fetch API, garantindo uma navegação fluida e contínua sem recarregamento da página. O sistema é pensado para oferecer uma experiência dinâmica e envolvente, facilitando o acesso a conteúdos atualizados e promovendo interação constante entre os usuários.",
-    tags: ["Portal", "Comunidade", "Fetch API"],
+    tags: ["NodeJS", "ExpressJS", "JavaScript", "HTML", "CSS", "JavaScript", "MySQL"],
     links: {
       repo: "https://github.com/Guilherme0112/FutOne",
       demo: "#",
@@ -154,7 +159,7 @@ const projects = [
     name: "ComPrei",
     description:
       "Plataforma de e-commerce funcional que oferece recursos essenciais como cadastro de produtos, painel administrativo para gerenciamento e um sistema de carrinho de compras intuitivo. A integração com o gateway de pagamento Mercado Pago possibilita transações seguras e práticas diretamente na loja, facilitando a finalização das compras. O sistema é estruturado para suportar operações básicas de comércio eletrônico, atendendo tanto às necessidades dos administradores quanto dos clientes com uma experiência simples e eficiente.",
-    tags: ["E-commerce", "Pagamentos", "Admin"],
+    tags: ["Java", "Spring Framework", "HTML", "CSS", "JavaScript", "MySQL"],
     links: {
       repo: "https://github.com/Guilherme0112/ComPrei",
       demo: "#",
@@ -165,7 +170,7 @@ const projects = [
     name: "ControlAccess",
     description:
       "Sistema para gestão de correspondências que centraliza o cadastro e o monitoramento dos recebimentos. O administrador registra as correspondências e aciona notificações por e-mail para os usuários envolvidos, mantendo-os informados. Os clientes podem acessar a plataforma para visualizar os registros e autorizar a abertura da correspondência, garantindo controle e transparência no processo. Após a autorização, o administrador anexa o conteúdo digitalizado, que gera automaticamente uma nova notificação para o usuário, fechando o ciclo de comunicação de forma eficiente e segura.",
-    tags: ["Gestão", "Email", "Notificações"],
+    tags: ["PHP", "Laravel", "VueJS", "TailwindCSS", "Email Notifications", "MySQL"],
     links: {
       repo: "https://github.com/Guilherme0112/ControlAccess",
       demo: "#",
@@ -177,7 +182,7 @@ const projects = [
     name: "DashTask",
     description:
       "Um gerenciador de frotas que permite controlar facilmente as frotas cadastradas pelo usuário. É possível definir o valor cobrado por quilômetro rodado, ajustando a cobrança conforme a necessidade. O sistema oferece um dashboard organizado em colunas que mostram entradas e saídas, facilitando a visualização e o acompanhamento financeiro. A interface é simples e funcional, auxiliando na gestão eficiente e na tomada de decisões baseadas em dados claros e atualizados.",
-    tags: ["Frotas", "Dashboard", "Gestão"],
+    tags: ["PHP", "Laravel", "React", "TypeScript", "PostgreSQL"],
     links: {
       repo: "https://github.com/Guilherme0112/DashTask",
       demo: "#",
@@ -189,7 +194,7 @@ const projects = [
     name: "Rede",
     description:
       "Aplicação full stack inspirada no Twitter, construída com Node.js, React com TypeScript, Redux, MongoDB, JWT e Sass. O sistema oferece criação de postagens, comentários, curtidas em comentários, busca dinâmica de usuários e páginas individuais para cada perfil. A API segue boas práticas de organização e segurança com autenticação JWT, enquanto o front-end utiliza Redux para controle previsível de estado e Sass para estilização modular. O resultado é uma rede social funcional, estável e estruturada, demonstrando integração eficiente entre diversas tecnologias atuais.",
-    tags: ["Social", "Full Stack", "Real-time"],
+    tags: ["NodeJS", "ExpressJS", "React", "TypeScript", "Redux", "MongoDB", "Sass"],
     links: {
       repo: "https://github.com/Guilherme0112/Rede",
       demo: "#",
@@ -289,6 +294,12 @@ export default function Home() {
               className="text-sm hover:text-accent transition-colors"
             >
               Skills
+            </a>
+            <a
+              href="#services"
+              className="text-sm hover:text-accent transition-colors"
+            >
+              Serviços
             </a>
             <a
               href="#experience"
@@ -507,8 +518,96 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Services / Company Section */}
+      <section id="services" className="py-20 border-t border-border">
+        <motion.div
+          className="container"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <span className="text-xs font-mono text-accent bg-accent/10 px-3 py-1 rounded-full font-medium inline-block mb-3">
+                Saldup Devs
+              </span>
+              <h2 className="text-4xl font-bold text-foreground">
+                Serviços & Soluções Web
+              </h2>
+            </div>
+            <p className="text-muted-foreground max-w-md text-sm md:text-base">
+              Desenvolvimento de softwares sob medida, automações e sistemas escaláveis para impulsionar o seu negócio.
+            </p>
+          </div>
+
+          <motion.div
+            className="bg-card border border-border rounded-xl p-8 hover:border-accent hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+            variants={itemVariants}
+          >
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-accent/5 rounded-full blur-2xl pointer-events-none" />
+
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+              <div className="max-w-2xl space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 bg-accent/10 rounded-lg text-accent">
+                    <Briefcase size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">
+                      Saldup Devs
+                    </h3>
+                    <p className="text-xs text-accent font-medium">
+                      Sua parceira em tecnologia e desenvolvimento sob medida
+                    </p>
+                  </div>
+                </div>
+
+                    <p className="text-muted-foreground leading-relaxed">
+                    Analisamos os gargalos e fluxos operacionais da sua empresa para entender exatamente onde estão os custos e o desperdício de tempo. A partir dessa dor, desenvolvemos automações sob medida e sistemas de gestão que eliminam tarefas manuais, integram suas ferramentas e escalam sua operação com eficiência.
+                  </p>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <span className="text-xs bg-secondary/80 border border-border text-foreground/80 px-3 py-1 rounded-md font-medium">
+                    Desenvolvimento SaaS
+                  </span>
+                  <span className="text-xs bg-secondary/80 border border-border text-foreground/80 px-3 py-1 rounded-md font-medium">
+                    Sistemas Web & ERPs
+                  </span>
+                  <span className="text-xs bg-secondary/80 border border-border text-foreground/80 px-3 py-1 rounded-md font-medium">
+                    Automações & IA
+                  </span>
+                  <span className="text-xs bg-secondary/80 border border-border text-foreground/80 px-3 py-1 rounded-md font-medium">
+                    APIs & Integrações
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 w-full sm:w-auto"
+                >
+                  <a
+                    href="https://devs.saldup.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2"
+                  >
+                    <Globe size={18} />
+                    Acessar Saldup Devs
+                    <ExternalLink size={16} />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* Experience Section */}
-      <section id="experience" className="py-20 border-t border-border">
+      <section id="experience" className="py-20 border-t border-border bg-secondary/30">
         <motion.div
           className="container"
           initial="hidden"
@@ -568,7 +667,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-20 border-t border-border bg-secondary/30"
+        className="py-20 border-t border-border"
       >
         <motion.div
           className="container"
@@ -578,7 +677,7 @@ export default function Home() {
           variants={containerVariants}
         >
           <h2 className="text-4xl font-bold mb-12 text-foreground">Projetos</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 items-start">
             {projects.map((project, idx) => (
               <motion.div
                 key={idx}
@@ -637,7 +736,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 border-t border-border">
+      <section id="education" className="py-20 border-t border-border bg-secondary/30">
         <motion.div
           className="container"
           initial="hidden"
@@ -736,7 +835,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-border py-8 bg-secondary/30">
         <div className="container text-center text-sm text-muted-foreground">
-          <p>© 2025 Guilherme Mendes. Todos os direitos reservados.</p>
+          <p>© 2026 Guilherme Mendes. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
